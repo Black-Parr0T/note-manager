@@ -15,7 +15,7 @@ function NoteForm({ form, setForm, mode }) {
     })
   }
   return (
-    <div className='flex flex-col justify-center items-center border w-full h-full rounded-2xl mx-auto py-3 gap-5'>
+    <div className='flex flex-col justify-center items-center border w-full h-full rounded-2xl mx-auto py-3 gap-5 dark:border-white border-gray-800'>
       <div className='flex justify-between w-[80%]'>
         <span></span>
         <h2 className='font-bold'>
@@ -23,21 +23,21 @@ function NoteForm({ form, setForm, mode }) {
             mode === 'edit' ? 'Edit Note' : 'Create Note'
           }
         </h2>
-        <p className='text-gray-400 cursor-pointer w-9' onClick={Pin} >
+        <p className='dark:text-gray-400 text-gray-800 font-semibold cursor-pointer w-9' onClick={Pin} >
           {
             form.pinned ? 'unpin' : 'pin'
           }
         </p>
       </div>
-      <div className='border-b-2 w-[80%] flex justify-between'>
+      <div className='border-b-2 dark:border-white border-gray-800 w-[80%] flex justify-between'>
         <label htmlFor="title" className='italic w-[10%]'>Title:</label>
         <input type="text" id="title" className='px-2 bg-inherit border-none focus:outline-none w-[90%]' onChange={handleChange} value={form.title} />
       </div>
-      <div className='border-b-2 w-[80%] flex justify-between'>
+      <div className='border-b-2 dark:border-white border-gray-800 w-[80%] flex justify-between'>
         <label htmlFor="tag_line w-[10%]" className='w-[10%] italic'>Tag:</label>
         <input type="text" id="tag_line" className='px-2 bg-inherit border-none focus:outline-none w-[90%]' onChange={handleChange} value={form.tag_line} />
       </div>
-      <div className='border-b-2 w-[80%] flex justify-between'>
+      <div className='border-b-2 dark:border-white border-gray-800 w-[80%] flex justify-between'>
         <label htmlFor="body" className='w-[10%] italic'>Body:</label>
         <textarea id="body" className='px-2 bg-inherit border-none focus:outline-none w-[90%]' rows={5} onChange={handleChange} value={form.body}></textarea>
       </div>

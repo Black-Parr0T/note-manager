@@ -7,15 +7,15 @@ function NoteCard({ note }) {
 
     return (
         <Link href={`/notes/${note._id}`}>
-            <div className='w-80 h-40 border px-2 py-3 rounded-lg flex flex-col justify-between cursor-pointer'>
+            <div className='w-80 h-40 border px-2 py-3 rounded-lg flex flex-col justify-between cursor-pointer dark:border-white border-black'>
                 {note.pinned &&
-                    <span className='flex text-xs'>
+                    <span className='flex text-xs gap-1'>
                         <Image src='/pinned.svg' width={12} height={12} alt='Pinned' />
                         pinned
                     </span>
                 }
                 <div className=''>
-                    <h3 className='mb-3 font-bold border-b-2'>
+                    <h3 className='mb-3 font-bold border-b-2 dark:border-white border-gray-800'>
                         {note.title}
                     </h3>
                     {

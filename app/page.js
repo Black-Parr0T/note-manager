@@ -55,12 +55,20 @@ export default function Home() {
           <NoteCard key={note._id} note={note} />
         ))}
       </div>
-      <div className="flex justify-between left-1/4 w-1/2 absolute bottom-4 z-10">
-        <Btn onClick={() => setPage(page - 1)} disabled={page === 1} text={'Prev'} />
-        <span>{
+      <div className="flex justify-between left-[12.5%] sm:left-1/4 w-3/4 sm:w-1/2 sticky bottom-4 mt-10 z-10">
+        {
+          !isLoading && (
+            <Btn onClick={() => setPage(page - 1)} text={'Previous'} disabled={page === 1} />
+          )
+        }
+        <span className="bg-slate-500 inline-block w-auto mx-auto rounded-xl px-5 py-1">{
           isLoading ? 'Loading...' : `Page ${page}`
         }</span>
-        <Btn onClick={() => setPage(page + 1)} text={'Next'} disabled={!hasMore} />
+        {
+          !isLoading && (
+            <Btn onClick={() => setPage(page + 1)} text={'Next'} disabled={!hasMore} />
+          )
+        }
       </div>
       {
         toast.show && (
