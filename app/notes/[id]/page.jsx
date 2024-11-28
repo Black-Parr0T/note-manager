@@ -28,7 +28,7 @@ function Page({ params }) {
         };
 
         fetchNote();
-    }, []);
+    }, [slug]);
     const updateNote = async () => {
         if (isLoading) {
             return;

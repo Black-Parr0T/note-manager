@@ -4,7 +4,7 @@ import NoteForm from '../components/NoteForm'
 import Btn from '../components/Btn'
 import Toast from '@/app/components/Toast';
 
-function page() {
+function Page() {
   const [isLoading, setIsLoading] = useState(false)
   const [toast, setToast] = useState({ show: false, message: '', type: '' });
   const [form, setForm] = useState({
@@ -56,4 +56,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
