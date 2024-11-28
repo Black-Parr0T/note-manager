@@ -30,15 +30,15 @@ function NoteForm({ form, setForm, mode }) {
         </p>
       </div>
       <div className='border-b-2 dark:border-white border-gray-800 w-[80%] flex justify-between'>
-        <label htmlFor="title" className='italic w-[10%]'>Title:</label>
+        <label htmlFor="title" className='italic'>Title:</label>
         <input type="text" id="title" className='px-2 bg-inherit border-none focus:outline-none w-[90%]' onChange={handleChange} value={form.title} />
       </div>
       <div className='border-b-2 dark:border-white border-gray-800 w-[80%] flex justify-between'>
-        <label htmlFor="tag_line w-[10%]" className='w-[10%] italic'>Tag:</label>
+        <label htmlFor="tag_line w-[10%]" className=' italic'>Tag:</label>
         <input type="text" id="tag_line" className='px-2 bg-inherit border-none focus:outline-none w-[90%]' onChange={handleChange} value={form.tag_line} />
       </div>
       <div className='border-b-2 dark:border-white border-gray-800 w-[80%] flex justify-between'>
-        <label htmlFor="body" className='w-[10%] italic'>Body:</label>
+        <label htmlFor="body" className='italic'>Body:</label>
         <textarea id="body" className='px-2 bg-inherit border-none focus:outline-none w-[90%]' rows={5} onChange={handleChange} value={form.body}></textarea>
       </div>
     </div>
